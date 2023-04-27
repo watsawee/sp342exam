@@ -9,7 +9,7 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num)) { //Max number for buy tickets
     return false;
   } else {
 	return true;
@@ -28,8 +28,8 @@ function validateForm(){
 		  return false;
 		}else{
 			total = priceCalculate();
-			alert("Total price for this booking is "+total+" USD");
-			return false;
+			alert("Total price for this booking is "+total+" USD"); 
+			return false;// Calculate price for ticket
 		}
 	}
 }
