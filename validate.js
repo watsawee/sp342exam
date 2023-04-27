@@ -11,6 +11,8 @@ function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
   if (isNaN(num)) {
     return false;
+  } else if (num > 5) {
+	return false;
   } else {
 	return true;
   }
@@ -23,7 +25,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkTicketNo()){
-		  alert("Invalid value for No.of tickets!!");
+		  alert("Invalid value for No. of tickets!!");
 		  document.getElementById("ticknum").focus();
 		  return false;
 		}else{
