@@ -2,6 +2,8 @@ function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
   if (nid.length != 13) {
     return false;
+  }else if(isNaN(nid)){
+	return false
   } else {
 	return true;
   }
@@ -11,6 +13,8 @@ function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
   if (isNaN(num)) {
     return false;
+  }else if (num <= 0 || num >= 6) {
+	return false;
   } else {
 	return true;
   }
