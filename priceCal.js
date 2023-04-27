@@ -1,9 +1,9 @@
 function priceCalculate() {
-  let ticknum = (document.getElementById("ticknum").value).trim();
+  let ticknum = (document.getElementById("ticknum").value).trim();//จำนวนตั๋ว
   let selectObj = document.getElementById("event");
-  let eventId = parseInt(selectObj.options[selectObj.selectedIndex].value);
-  
-  return 0;
+  let eventId = parseFloat(selectObj.options[selectObj.selectedIndex].value); 
+  // การคำนวณค่าตั๋ว
+  return parseFloat(ticknum * eventId).toFixed(2); 
 }
 
 
