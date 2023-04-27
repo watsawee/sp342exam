@@ -1,6 +1,7 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
+  // แก้ไขให้กรอกได้เฉพาะตัวเลข และไม่เกิน 13 หลักเท่านั้น
+  if (nid.length != 13 || isNaN(nid)) {
     return false;
   } else {
 	return true;
@@ -9,12 +10,14 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
+  // แก้ไขข้อมูลให้จองตั๋วได้ไม่เกิน 5 ใบเท่านั้น
+  if (isNaN(num) || num > 5 || num < 1 ) {
     return false;
   } else {
 	return true;
   }
 }
+
 
 function validateForm(){
 	if(!checkNID()){
