@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
+  if (nid.length != 13 && isNaN(nid)) {
     return false;
   } else {
 	return true;
@@ -9,9 +9,9 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1) {
     return false;
-  } else {
+  } else if (num <=5 && candi >= 1){
 	return true;
   }
 }
