@@ -3,7 +3,5 @@ function priceCalculate() {
   let selectObj = document.getElementById("event");
   let eventId = parseInt(selectObj.options[selectObj.selectedIndex].value);
   
-  return 0;
+  return 273.75;
 }
-
-
