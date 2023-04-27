@@ -24,6 +24,47 @@
       <a class="nav-link" href="event2.html">Event#2</a>
     </li>
   </ul>
+
+  <form action="#" method="post" onsubmit="return validateForm()">
+    <div class="mb-3 mt-3">
+        <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="nid" name="nid" required/>
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="fname" name="fname" required/>
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="lname" name="lname" required/>
+    </div>
+    <div class="mb-3 mt-3">
+        <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="gender1" name="genderRad" value="1" checked>&nbsp; Male &nbsp;&nbsp;
+		<input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female
+    </div>
+    <div class="mb-3 mt-3">
+        <label for="event" class="form-label">Event<span style="color:red">*</span></label>
+        <select class="form-select" id="event" name="event">
+		  <option value="1">HuaHin Tour (50 USD)</option>
+		  <option value="2">Chiang Mai Tour (75 USD)</option>
+		  <option value="3">Bangkok Tour (100 USD)</option>
+		  <option value="4">Phuket Tour (120 USD)</option>
+		</select>
+    </div>
+	<div class="mb-3 mt-3">
+        <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
+        <input type="text" class="form-control" id="ticknum" name="ticknum" required/>
+    </div>
+	<div class="mb-3 mt-3">
+        <label class="form-label">Collection method<span style="color:red">*</span></label>&nbsp;&nbsp;
+        <input type="radio" class="form-check-input" id="collectRad1" name="collectRad" value="1" checked>&nbsp; E-Tickets &nbsp;&nbsp;
+		<input type="radio" class="form-check-input" id="collectRad2" name="collectRad" value="2">&nbsp; Ticket vending machine
+    </div>
+	
+    <button type="submit" class="btn btn-primary">Book</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+</form><br><br>
   
 </div>
 
