@@ -5,7 +5,7 @@ function priceCalculate() {
 
   
 
-  let price =eventId * ticknum;
+  let price = eventId * ticknum;
   
   
   return price;
