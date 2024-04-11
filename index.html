@@ -28,15 +28,17 @@
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
+        <input type="text" class="form-control" id="national_id" name="national_id" maxlength="13"
+         pattern="[0-9]{13}" required>    
     </div>
+
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+        <input type="text" class="form-control" id="fname" name="fname" required>
     </div>
     <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+        <input type="text" class="form-control" id="lname" name="lname" required>
     </div>
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
@@ -54,16 +56,17 @@
     </div>
 	<div class="mb-3 mt-3">
         <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="ticknum" name="ticknum"/>
+        <input type="text" class="form-control" id="ticknum" name="ticknum"  pattern="[1-5]{1}" maxlength="1" required> 
     </div>
 	<div class="mb-3 mt-3">
         <label class="form-label">Collection method<span style="color:red">*</span></label>&nbsp;&nbsp;
         <input type="radio" class="form-check-input" id="collectRad1" name="collectRad" value="1" checked>&nbsp; E-Tickets &nbsp;&nbsp;
 		<input type="radio" class="form-check-input" id="collectRad2" name="collectRad" value="2">&nbsp; Ticket vending machine
     </div>
-	
-    <button type="submit" class="btn btn-primary">Book</button>
-    <button type="reset" class="btn btn-primary">Reset</button>
+    <form action="#" method="post" onsubmit="return priceCalculate()">
+      <button type="submit" class="btn btn-primary" onclick="priceCalculate()">Book</button> 
+      <button type="reset" class="btn btn-primary">Reset</button>
+    </form>
 </form><br><br>
 </div>
 
