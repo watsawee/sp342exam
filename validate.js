@@ -9,8 +9,8 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
+  if (isNaN(num) && num <= 5 && num >= 1) {
+    return false ;
   } else {
 	return true;
   }
@@ -25,7 +25,7 @@ function validateForm(){
 		if(!checkTicketNo()){
 		  alert("Invalid value for No.of tickets!!");
 		  document.getElementById("ticknum").focus();
-		  return false;
+		  return true;
 		}else{
 			total = priceCalculate();
 			alert("Total price for this booking is "+total+" USD");
