@@ -18,25 +18,25 @@
       <a class="nav-link active" href="index.html">Tickets booking</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="event1.html">Event#1</a>
+      <a class="nav-link" href="event1.html">Main Event</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="event2.html">Event#2</a>
+      <a class="nav-link" href="event2.html">Comming Soon</a>
     </li>
   </ul>
   
   <form action="#" method="post" onsubmit="return validateForm()">
     <div class="mb-3 mt-3">
         <label for="nid" class="form-label">National ID<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="nid" name="nid"/>
+        <input type="text" class="form-control" id="nid" name="nid" required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="fname" class="form-label">First Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="fname" name="fname"/>
+        <input type="text" class="form-control" id="fname" name="fname" required/>
     </div>
     <div class="mb-3 mt-3">
         <label for="lname" class="form-label">Last Name<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="lname" name="lname"/>
+        <input type="text" class="form-control" id="lname" name="lname" required/>
     </div>
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
@@ -52,10 +52,20 @@
 		  <option value="4">Lisa Lalisa Manoban Blackpink Live performance (100 USD)</option>
 		</select>
     </div>
-	<div class="mb-3 mt-3">
+	<!-- <div class="mb-3 mt-3">
         <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="ticknum" name="ticknum"/>
-    </div>
+        <input type="text" class="form-control" id="ticknum" name="ticknum" required/>
+  </div> -->
+  <div class="mb-3 mt-3">
+    <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
+    <select class="form-select" id="ticknum" name="ticknum">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+  </div>
 	<div class="mb-3 mt-3">
         <label class="form-label">Collection method<span style="color:red">*</span></label>&nbsp;&nbsp;
         <input type="radio" class="form-check-input" id="collectRad1" name="collectRad" value="1" checked>&nbsp; E-Tickets &nbsp;&nbsp;
