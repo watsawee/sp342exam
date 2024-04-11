@@ -12,9 +12,10 @@ function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
   if (isNaN(num)) {
     return false;
-  } else {
+  } else if (num > 0 && num <= 5){
 	return true;
   }
+	return false;
 }
 
 function validateForm(){
