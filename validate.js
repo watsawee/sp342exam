@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (!isNaN(nid)&& nid.length != 13) {
+  if (!isNaN(nid)&& nid.length == 13) {
     return true;
   } else {
 	return false;
@@ -20,7 +20,7 @@ function validateForm(){
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
-	  return false;
+	  return true;
 	}else{
 		if(!checkTicketNo()){
 		  alert("Invalid value for No.of tickets!!");
