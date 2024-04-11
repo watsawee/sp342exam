@@ -9,8 +9,57 @@
   <script src="validate.js"></script>
   <script src="priceCal.js"></script>
 </head>
-<body>
+<style>
+  .container {
 
+    margin: 0 auto;
+    position: relative;
+    align-items:center;
+    justify-content: center;
+  }
+  .card{
+    display: grid;
+    grid-template-columns: auto auto; 
+    grid-gap:30px;
+  }
+  .card h2 {
+    color: 	#fffeff;
+    position:absolute; 
+    bottom: 10px;
+    left: 20px;
+    font-size: 1.6rem;
+    letter-spacing: 5px;
+    filter: brightness(100%);
+  }
+  .card .box1,
+  .box2 {
+    width: 80%;
+    height:250px;
+    background-position: center;
+    background-size:cover;
+    position: relative; 
+    border-radius: 25px;
+    cursor: pointer;
+    filter: brightness(65%);
+  }
+  .box1 {
+    background-image: url("https://www.thaiticketmajor.com/img_poster/prefix_1/2830/5830/babii-24-7-concert-660289d476a8f-l.jpg");
+  }
+  .box2 {
+  background-image: url("https://www.thaiticketmajor.com/img_poster/prefix_1/2828/5828/ilu-24-7-365-tour-elijah-woods-65bb5e6593cd2-l.png");
+  }
+  
+  .card div {
+    transition: 0.5s; 
+  }
+  .card div:hover {
+    transition: 0.3s;
+    transform: translateY(-10px);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+ 
+</style>
+<body>
 <div class="container mt-3">
   <h2>Online Reservation System</h2><br>
   <ul class="nav nav-tabs">
@@ -18,14 +67,25 @@
       <a class="nav-link" href="index.html">Tickets booking</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link active" href="event1.html">Event#1</a>
+      <a class="nav-link active" href="event1.html">Event in This week</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="event2.html">Event#2</a>
+      <a class="nav-link" href="event2.html">Coming Soon</a>
     </li>
   </ul>
   
 </div>
-
+    <div class="card" style="width:60%;height:auto;">
+      <div class="box1">
+        <h2>BABII 24/7 CONCERT</h2>
+        <a src ="babii.jpg" ></a>
+      </div>
+    </div>
+    <div class="card" style="width:60%;height:auto;">
+      <div class="box2">
+        <h2>elijah woods : ilu 24/7, 365 tour</h2>
+        <a src ="ilu.png" ></a>
+      </div>
+    </div>
 </body>
 </html>
