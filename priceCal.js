@@ -1,9 +1,12 @@
 function priceCalculate() {
-  let ticknum = (document.getElementById("ticknum").value).trim();
+  let ticknum = parseInt(document.getElementById("ticknum").value.trim());
   let selectObj = document.getElementById("event");
   let eventId = parseInt(selectObj.options[selectObj.selectedIndex].value);
+
   
-  return 0;
+
+  let price = eventId * ticknum;
+  
+  
+  return price;
 }
-
-
