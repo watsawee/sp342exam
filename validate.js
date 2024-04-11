@@ -1,9 +1,9 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
+  if (nid.length !== 13 || !/^\d+$/.test(nid)) {
     return false;
   } else {
-	return true;
+    return true;
   }
 }
 
