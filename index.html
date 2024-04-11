@@ -41,7 +41,7 @@ function validateForm() {
     var eventPrice = document.getElementById("event").value; 
     var totalPrice = parseFloat(eventPrice) * parseInt(ticknum);
  
-    alert("ราคารวมทั้งหมด: " + totalPrice.toFixed(2) + " USD");
+    alert("ราคารวมทั้งหมด: " + totalPrice.toFixed() + " USD");
 
     return true;
 }
