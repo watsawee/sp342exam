@@ -1,10 +1,7 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
-    return false;
-  } else {
-	return true;
-  }
+  let nidcheck = /^\d{13}$/;
+  return nidcheck.test(nid);
 }
 
 function checkTicketNo() {
