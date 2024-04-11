@@ -1,9 +1,7 @@
 function priceCalculate() {
-  let ticknum = (document.getElementById("ticknum").value).trim();
-  let selectObj = document.getElementById("event");
-  let eventId = parseInt(selectObj.options[selectObj.selectedIndex].value);
+  const ticknum = parseInt(document.getElementById("ticknum").value);
+  const eventId = parseInt(document.getElementById("event").value);
+  const ticketPrices = [91.25, 79.88, 83.12, 100];
   
-  return 0;
+  return ticknum * ticketPrices[eventId - 1] || 0;
 }
-
-
