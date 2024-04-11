@@ -41,7 +41,7 @@
     <div class="mb-3 mt-3">
         <label class="form-label">Gender<span style="color:red">*</span></label>&nbsp;&nbsp;
         <input required type="radio" class="form-check-input" id="gender1" name="genderRad" value="1" checked>&nbsp; Male &nbsp;&nbsp;
-		<input type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female
+		    <input required type="radio" class="form-check-input" id="gender2" name="genderRad" value="2">&nbsp; Female
     </div>
     <div class="mb-3 mt-3">
         <label for="event" class="form-label">Event<span style="color:red">*</span></label>
@@ -54,12 +54,12 @@
     </div>
 	<div class="mb-3 mt-3">
         <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="ticknum" name="ticknum"/>
+        <input required type="text" class="form-control" id="ticknum" name="ticknum"/>
     </div>
 	<div class="mb-3 mt-3">
         <label class="form-label">Collection method<span style="color:red">*</span></label>&nbsp;&nbsp;
-        <input type="radio" class="form-check-input" id="collectRad1" name="collectRad" value="1" checked>&nbsp; E-Tickets &nbsp;&nbsp;
-		<input type="radio" class="form-check-input" id="collectRad2" name="collectRad" value="2">&nbsp; Ticket vending machine
+        <input required type="radio" class="form-check-input" id="collectRad1" name="collectRad" value="1" checked>&nbsp; E-Tickets &nbsp;&nbsp;
+		    <input required type="radio" class="form-check-input" id="collectRad2" name="collectRad" value="2">&nbsp; Ticket vending machine
     </div>
 	
     <button type="submit" class="btn btn-primary">Book</button>
