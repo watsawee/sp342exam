@@ -8,6 +8,23 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="validate.js"></script>
   <script src="priceCal.js"></script>
+
+  <style>
+    .carousel {
+      width:100%; /* ทำให้ carousel เต็มความกว้างของ container */
+      max-width: 500px; /* กำหนดความกว้างสูงสุดของ carousel */
+      height: auto;
+      display:flex;
+      align-items: center;
+      margin-top: 30px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    body{
+      margin: 20px;
+    }
+    </style>
 </head>
 <body>
 
@@ -24,8 +41,49 @@
       <a class="nav-link" href="event2.html">Event#2</a>
     </li>
   </ul>
-  
 </div>
-
+<h2 align="center">-SongKran Festival-</h2>
+<div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/Event1.jpg" class="d-block w-100" 
+	    data-bs-toggle="tooltip" data-bs-placement="top" title="Event1">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Event2.jpg" class="d-block w-100" 
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Event2">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Event3.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Event3">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Event4.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Event4">
+    </div>
+    <div class="carousel-item">
+      <img src="images/Event5.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Event5">
+    </div>
+    
+    <script>
+      
+      setInterval(nextImage, 5000);
+    
+      
+      function nextImage() {
+        const carousel = document.getElementById('imageSlider');
+        const activeIndex = Array.from(carousel.querySelectorAll('.carousel-item')).findIndex(item => item.classList.contains('active'));
+        const nextIndex = (activeIndex + 1) % carousel.querySelectorAll('.carousel-item').length;
+        carousel.querySelector(`[data-bs-slide-to="${nextIndex}"]`).click();
+      }
+    </script>
 </body>
 </html>
