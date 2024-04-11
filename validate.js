@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
+  if (!/^\d{13}$/.test(nid)) {
     return false;
   } else {
 	return true;
