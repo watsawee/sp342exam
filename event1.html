@@ -25,30 +25,50 @@
     </li>
   </ul>
   
-  <table class="table table-striped">
-    <thead>
-      <tr>
-		    <th></th>
-        <th>&nbsp;</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-		  <td rowspan="3"><img src="image/promotion_nokair.jpg" class="rounded mx-auto d-block" alt="Alan McDonald" width="200" height="356"></td>
-        <th></th>
-      </tr>
-      <tr>
-        <th>Promotion Nokair</th>
-        
-      </tr>
-	    <tr>
-        <th>Age:</th>
-      </tr>
-	  
-      
-    </tbody>
-  </table>
+  <div id="imageSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      <button type="button" data-bs-target="#imageSlider" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="image/promotion_airasia.png" class="d-block w-100" 
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Air Asia Promotion">
+      </div>
+      <div class="carousel-item">
+        <img src="image/promotion_nokair.png" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Nok Air Promotion">
+      </div>
+      <div class="carousel-item">
+        <img src="images/PhangNga.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Ko Ta Pu">
+      </div>
+      <div class="carousel-item">
+        <img src="images/HuaHin.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Hua Hin">
+      </div>
+      <div class="carousel-item">
+        <img src="images/Ayutthaya.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Ayutthaya">
+      </div>
+      <div class="carousel-item">
+        <img src="images/FloatingMarket.jpg" class="d-block w-100"
+      data-bs-toggle="tooltip" data-bs-placement="top" title="Damnoen saduak floating market">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#imageSlider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#imageSlider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
 
 </div>
 
