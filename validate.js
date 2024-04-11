@@ -1,6 +1,7 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
+  if (nid.length != 13 || isNaN(nid)) {
+	alert("หมายเลขบัตรประชาชนต้องมี 13 หลักและต้องเป็นตัวเลขเท่านั้น")
     return false;
   } else {
 	return true;
@@ -31,5 +32,5 @@ function validateForm(){
 			alert("Total price for this booking is "+total+" USD");
 			return false;
 		}
-	}
+	}	
 }
