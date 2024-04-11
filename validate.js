@@ -1,20 +1,21 @@
 function checkNID() {
-  let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
-    return false;
-  } else {
-	return true;
+	let nid = (document.getElementById("nid").value).trim();
+	if (nid.length !== 13 || isNaN(nid)) {
+	  return false;
+	} else {
+	  return true;
+	}
   }
-}
 
-function checkTicketNo() {
-  let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  function checkTicketNo() {
+	let num = parseInt(document.getElementById("ticknum").value.trim());
+	if (isNaN(num) || num < 1 || num > 5) {
+	  return false;
+	} else {
+	  return true;
+	}
   }
-}
+  
 
 function validateForm(){
 	if(!checkNID()){
