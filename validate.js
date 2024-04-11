@@ -6,10 +6,13 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+  if (num>=1 && num<=5) {
+    return true;
+  } else if (isNaN(num) ){
+	return false;
+  }
+  else{
+	return false;
   }
 }
 
