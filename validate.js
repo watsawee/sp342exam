@@ -8,13 +8,13 @@ function checkNID() {
 }
 
 function checkTicketNo() {
-  let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
-    return false;
-  } else {
-	return true;
+	let num = parseInt(document.getElementById("ticknum").value.trim());
+	if (isNaN(num) || num < 1 || num > 5) {
+	  return false;
+	} else {
+	  return true;
+	}
   }
-}
 
 function validateForm(){
 	if(!checkNID()){
