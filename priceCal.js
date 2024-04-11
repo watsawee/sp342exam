@@ -3,7 +3,14 @@ function priceCalculate() {
   let selectObj = document.getElementById("event");
   let eventId = parseInt(selectObj.options[selectObj.selectedIndex].value);
   
-  return 0;
+if(eventId ==1){
+  return 91.25 * ticknum ;
 }
-
-
+if(eventId ==2){
+  return 79.88 * ticknum ;
+}
+if(eventId ==3){
+  return 83.12* ticknum ;
+}else 
+  return 100 * ticknum;
+}
