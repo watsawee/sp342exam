@@ -29,7 +29,7 @@ function validateForm(){
 		  return false;
 		}else{
 			total = priceCalculate();
-			alert("Total price for this booking is "+total+" USD");
+			alert("Total price for this booking is "+ total +" USD");
 			
 			return false;
 		}
