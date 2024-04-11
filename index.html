@@ -10,6 +10,22 @@
   <script src="priceCal.js"></script>
 </head>
 <body>
+  <script>
+    var ticketInput = document.getElementById("ticknum");
+    ticketInput.addEventListener("input", function() {
+        var minTickets = 1; 
+        var maxTickets = 5; 
+        var enteredTickets = parseInt(ticketInput.value); 
+        if (enteredTickets < minTickets) {
+            alert("You cannot buy less than " + minTickets + " ticket.");
+            ticketInput.value = minTickets;
+        }
+        else if (enteredTickets > maxTickets) {
+            alert("You cannot buy more than " + maxTickets + " tickets.");
+            ticketInput.value = maxTickets;
+        }
+    });
+</script>
 
 <div class="container mt-3">
   <h2>Online Reservation System</h2><br>
@@ -52,10 +68,11 @@
 		  <option value="4">Lisa Lalisa Manoban Blackpink Live performance (100 USD)</option>
 		</select>
     </div>
-	<div class="mb-3 mt-3">
-        <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="ticknum" name="ticknum"/>
-    </div>
+    <div class="mb-3 mt-3">
+      <label for="ticknum" class="form-label">Number of tickets (max 5 tickets) <span style="color:red">*</span></label>
+      <input type="number" class="form-control" id="ticknum" name="ticknum" min="1" max="5"/>
+  </div>
+  
 	<div class="mb-3 mt-3">
         <label class="form-label">Collection method<span style="color:red">*</span></label>&nbsp;&nbsp;
         <input type="radio" class="form-check-input" id="collectRad1" name="collectRad" value="1" checked>&nbsp; E-Tickets &nbsp;&nbsp;
