@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.value !== 13) {
+  if (isNaN(nid) && nid.length == 13) {
     return false;
   } else {
 	return true;
@@ -9,7 +9,7 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (num.value <=5) {
+  if (isNaN(num)) {
     return false;
   } else {
 	return true;
