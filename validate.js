@@ -1,6 +1,6 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
+  if (!/^\d{13}$/.test(nid)) {
     return false;
   } else {
 	return true;
@@ -9,7 +9,7 @@ function checkNID() {
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1 || num > 5) {
     return false;
   } else {
 	return true;
@@ -23,7 +23,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkTicketNo()){
-		  alert("Invalid value for No.of tickets!!");
+		  alert("Invalid value for No.of tickets!! Please enter a number between 1 and 5.");
 		  document.getElementById("ticknum").focus();
 		  return false;
 		}else{
