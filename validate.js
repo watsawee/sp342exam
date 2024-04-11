@@ -27,7 +27,7 @@ function validateForm(){
 		  document.getElementById("ticknum").focus();
 		  return false;
 		}else{
-			total = priceCalculate();
+			let total = priceCalculate();
 			alert("Total price for this booking is "+total+" USD");
 			return false;
 		}
