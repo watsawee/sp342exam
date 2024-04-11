@@ -1,7 +1,7 @@
 
 function checkNID() {
-  let nid = (document.getElementById("nid").value = "").trim();
-  if (nid.length != 13)  {
+  let nid = (document.getElementById("nid").value ).trim();
+  if (nid.length != 13 && nid >= 1 && nid <=13 )  {
     return false;
   } else { 
 	return true;
@@ -30,6 +30,7 @@ function validateForm(){
 		}else{
 			total = priceCalculate();
 			alert("Total price for this booking is "+total+" USD");
+			
 			return false;
 		}
 	}
