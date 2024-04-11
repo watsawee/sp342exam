@@ -1,19 +1,19 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
-  if (nid.length != 13) {
-    return false;
+  if (!isNaN(nid) && nid.length == 13) {
+    return true;
   } else {
-	return true;
+	return false;
   }
 }
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
-  if (isNaN(num)) {
+  if (isNaN(num) || num < 1 || num > 5) {
     return false;
   } else {
-	return true;
-  }
+    return true;
+}
 }
 
 function validateForm(){
@@ -23,7 +23,7 @@ function validateForm(){
 	  return false;
 	}else{
 		if(!checkTicketNo()){
-		  alert("Invalid value for No.of tickets!!");
+		  alert("Invalid value for Number of tickets!!");
 		  document.getElementById("ticknum").focus();
 		  return false;
 		}else{
