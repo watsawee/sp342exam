@@ -8,6 +8,46 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="validate.js"></script>
   <script src="priceCal.js"></script>
+  <script>
+function validateForm() {
+    var nid = document.getElementById("nid").value;
+    var fname = document.getElementById("fname").value;
+    var lname = document.getElementById("lname").value;
+    var ticknum = document.getElementById("ticknum").value;
+
+   
+    if (isNaN(nid) || isNaN(ticknum) || nid == "" || ticknum == "") {
+        alert("กรุณากรอกข้อมูลในทุกช่องและให้เป็นตัวเลขเท่านั้น");
+        return false;
+    }
+
+    
+    if (nid.length !== 13) {
+        alert("กรุณากรอกหมายเลขบัตรประชาชนที่ถูกต้อง (13 หลัก)");
+        return false;
+    }
+
+    if (ticknum < 1 || ticknum > 5) {
+        alert("กรุณากรอกจำนวนตั๋วให้ถูกต้อง (1-5 ตั๋ว)");
+        return false;
+    }
+
+    if (fname == "" || lname == "" || ticknum == "") {
+        alert("กรุณากรอกข้อมูลในทุกช่องที่มีเครื่องหมายดอกจันสีแดง (*)");
+        return false;
+    }
+
+   
+    var eventPrice = document.getElementById("event").value; 
+    var totalPrice = parseFloat(eventPrice) * parseInt(ticknum);
+ 
+    alert("ราคารวมทั้งหมด: " + totalPrice.toFixed(2) + " USD");
+
+    return true;
+}
+
+
+  </script>
 </head>
 <body>
 
