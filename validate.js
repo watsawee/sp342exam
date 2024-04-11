@@ -1,18 +1,18 @@
 function checkNID() {
   let nid = (document.getElementById("nid").value).trim();
   if (nid.length !== 13) {
-    return true;
+    return false;
   } else {
-	return false;
+	return true;
   }
 }
 
 function checkTicketNo() {
   let num = (document.getElementById("ticknum").value).trim();
   if (isNaN(num)) {
-    return true;
+    return false;
   } else {
-	return false;
+	return true;
   }
 }
 
@@ -20,7 +20,7 @@ function validateForm(){
 	if(!checkNID()){
 	  alert("Invalid value for National ID!");
 	  document.getElementById("nid").focus();
-	  return true;
+	  return false;
 	}else{
 		if(!checkTicketNo()){
 		  alert("Invalid value for No.of tickets!!");
